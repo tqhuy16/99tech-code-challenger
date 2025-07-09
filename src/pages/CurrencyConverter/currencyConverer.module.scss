@@ -1,0 +1,39 @@
+@use '@assets/styles/bases/variables' as *;
+@use '@assets/styles/bases/breakpoint' as *;
+
+.app {
+  padding: 130px 0 80px;
+
+  .appTitle {
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: $primary-100;
+    padding: 0 70px;
+  }
+
+  .appDescription {
+    font-size: 30px;
+    color: $white;
+    text-align: center;
+    padding: 40px 70px;
+  }
+
+  .formConvert {
+    padding: 0 100px;
+  }
+
+  @include media-query(sm) {
+    .appTitle {
+      padding: 0 30px;
+    }
+
+    .appDescription {
+      padding: 40px 50px;
+    }
+
+    .formConvert {
+      padding: 0 50px;
+    }
+  }
+}

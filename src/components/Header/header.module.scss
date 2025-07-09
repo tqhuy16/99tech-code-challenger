@@ -1,0 +1,21 @@
+@use '@assets/styles/bases/variables' as *;
+
+
+.headerBar {
+    display: flex;
+    background-color: $primary;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    border-bottom: 1px solid $primary-100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    .logoMoney {
+        width: 90px;
+        height: 80px;
+        fill: $white;
+    }
+}

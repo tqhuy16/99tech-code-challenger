@@ -1,0 +1,51 @@
+@use '@assets/styles/bases/variables' as *;
+@use '@assets/styles/bases/breakpoint' as *;
+
+.convert {
+    background-color: $white;
+    padding: 50px;
+    border-radius: 10px;
+    color: $primary;
+    font-size: 20px;
+    font-weight: bold;
+
+    .convertInfo {
+        text-align: center;
+        padding-bottom: 40px;
+
+        .rate {
+            margin-bottom: 10px;
+        }
+
+    }
+
+    .mainConvert {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .convertFrom,
+        .convertTo {
+            width: 100%;
+        }
+
+        .changeButton {
+            margin: 20px 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $primary-100;
+            border-radius: 50%;
+            background-color: $primary-100;
+            cursor: pointer;
+
+            .swapBtn {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+}

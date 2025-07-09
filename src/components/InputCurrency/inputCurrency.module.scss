@@ -1,0 +1,96 @@
+@use '@assets/styles/bases/variables' as *;
+@use '@assets/styles/bases/breakpoint' as *;
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $primary;
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 100%;
+    font-size: 18px;
+    background-color: $white;
+    margin-top: 5px;
+    transition: border 0.2s ease;
+
+    &:hover {
+        border: 2px solid $primary;
+    }
+
+    @include media-query(sm) {
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+}
+
+.input {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    flex: 1;
+    min-width: 0; // ✅ QUAN TRỌNG để không bị tràn ra khi có flex
+    background: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media-query(sm) {
+        font-size: 16px;
+    }
+}
+
+.currency {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    @include media-query(sm) {
+        max-width: 60px;
+        gap: 3px;
+    }
+}
+
+.code {
+    font-weight: 600;
+}
+
+.dropdownIcon {
+    width: 18px;
+    height: 18px;
+
+    @include media-query(sm) {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.dropdownList {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: $white;
+    border: 1px solid green;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    min-width: 80px;
+    z-index: 10;
+    overflow: auto;
+    height: 120px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.dropdownItem {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary-100;
+    }
+}

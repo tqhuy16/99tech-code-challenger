@@ -1,0 +1,6 @@
+@use '@assets/styles/bases/variables' as *;
+
+.mainApp {
+    min-height: 100vh;
+    background-color: $primary;
+}
