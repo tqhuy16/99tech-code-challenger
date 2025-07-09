@@ -12,7 +12,6 @@ export function getLatestUniqueCurrencies(data: CurrencyRate[]): CurrencyRate[] 
             const existingDate = new Date(existing.date).getTime();
             const currentDate = new Date(item.date).getTime();
 
-            // Nếu item mới hơn thì thay thế
             if (currentDate > existingDate) {
                 map.set(item.currency, item);
             }
